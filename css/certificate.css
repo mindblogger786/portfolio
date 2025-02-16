@@ -1,0 +1,40 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    gap: 20px;
+    justify-content: center;
+    width: 90%;
+    align-items: center;
+}
+.education-box {
+    width: 60%;
+    margin: 0 auto;
+}
+.certification-box {
+    max-width: 400px;
+    height: fit-content;
+}
+.education-box, .certification-box {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.education-box:hover, .certification-box:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+.icon {
+    width: 80%;
+    height: 200px;
+    margin-bottom: 10px;
+    transition: transform 1s;
+}
+.certification-box:hover .icon {
+    transform: rotateY(360deg);
+}

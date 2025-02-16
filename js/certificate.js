@@ -1,0 +1,1 @@
+gsap.from(".education-box, .certification-box", { opacity: 0, y: 50, duration: 1, stagger: 0.3 });

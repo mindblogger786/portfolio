@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Navbar</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/certificate.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        :root {
+            --primary-color: #ff9900;
+            --secondary-color: #e0e0e0;
+            --text-color: #333;
+            --bg-color: #fff;
+            --box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3), -2px -2px 10px rgba(0, 0, 0, 0.3);
+        }
+        body.dark-mode {
+            --primary-color: #ffcc66;
+            --secondary-color: #e0e0e0;
+            --text-color: #fff;
+            --bg-color: #222;
+            --box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.4), -5px -5px 15px rgba(255, 255, 255, 0.4);
+        }
+    </style>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- LightBox CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">{PV}</div>
+        <div class="nav-links">
+            <a href="#hero" onclick="loadSection('hero.html')">Home</a>
+            <a href="#about" onclick="loadSection('about.html')">About</a>
+            <a href="#skills" onclick="loadSection('skills.html')">Skills</a>
+            <a href="#projects" onclick="loadSection('projects.html')">Projects</a>
+            <a href="#experience" onclick="loadSection('experience.html')">Work Experience</a>
+            <a href="#education" onclick="loadSection('education.html')">Education</a>
+            <a href="#contact" onclick="loadSection('contact.html')">Contact</a>
+        </div>
+        <button class="toggle-mode" onclick="toggleMode()">🌙</button>
+    </nav>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 id="welcome">Welcome to my Portfolio!</h1>
+                <h1 id="title" class="typing">Hi, I'm <span class="highlight">Piyush Verma</span></h1><br>
+                <h2 id="tagline" class="typing">A Passionate Web Developer!</h2>
+                <div class="buttons">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Hire Me</a>
+                </div>
+            </div>
+            <div class="hero-avatar">
+                <dotlottie-player src="https://lottie.host/75f6fde7-4718-400d-9184-d741bf0dc063/TVDqp4CdoB.lottie" background="transparent" speed="1" style="width: 500px; height: 500px" loop autoplay></dotlottie-player>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <h2>About Me</h2>
+            <section class="section">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p><span class="highlight">Hello!</span> I'm <span class="highlight">Piyush Verma</span>, a passionate full-stack developer specializing in web technologies. I work with <span class="highlight">Python, Django, JavaScript, and React</span> to build high-performance web applications.</p>
+                        <p>I thrive on <span class="highlight">problem-solving</span>, crafting clean code, and designing intuitive user experiences. With a deep love for technology, I constantly explore new trends and frameworks to stay ahead.</p>
+                        <p>Beyond coding, I enjoy reading tech blogs, contributing to open-source projects, and engaging with the developer community.</p>
+                        <p>Let's collaborate and create something amazing!</p>
+                        <div class="social-icons">
+                            <a href="#" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0077B5;"></i> LinkedIn</a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-github" style="color: #000;"></i> GitHub</a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-square-instagram" style="color: #962fbf;"></i> Instagram</a>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/Piyush_Verma_Profile_Photo.png" alt="Your Name">
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2>Technical & Soft Skills</h2>
+            <section class="section">
+                <div class="skills-container">
+                    <div class="skills-column">
+                        <h3>Technical Skills</h3>
+                        <div class="skill" data-skill="90">
+                            <span class="skill-name">Python & Django</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="85">
+                            <span class="skill-name">JavaScript & React</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="95">
+                            <span class="skill-name">HTML & CSS</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="80">
+                            <span class="skill-name">SQL & Databases</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="75">
+                            <span class="skill-name">Git & GitHub</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="70">
+                            <span class="skill-name">Docker & Kubernetes</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="80">
+                            <span class="skill-name">RESTful APIs</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="85">
+                            <span class="skill-name">Cloud Computing (AWS, GCP)</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-column">
+                        <h3>Soft Skills</h3>
+                        <div class="skill" data-skill="90">
+                            <span class="skill-name">Problem Solving</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="85">
+                            <span class="skill-name">Communication</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="95">
+                            <span class="skill-name">Teamwork</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="80">
+                            <span class="skill-name">Adaptability</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="85">
+                            <span class="skill-name">Time Management</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="75">
+                            <span class="skill-name">Leadership</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="80">
+                            <span class="skill-name">Critical Thinking</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                        <div class="skill" data-skill="85">
+                            <span class="skill-name">Creativity</span>
+                            <div class="tooltip">
+                                <div class="progress-bar"><div class="progress-fill"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <h2>Projects</h2>
+            <section class="section">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-inner">
+                            <div class="project-front" style="background-image: url('images/social-media.jpg');"></div>
+                            <div class="project-back">
+                                <h3>Social Media Platform</h3>
+                                <p>A Django-based social media platform that allows users to create profiles, post updates, follow others, like and comment on posts, and send direct messages. It features a personalized feed, media uploads, and real-time notifications for an engaging user experience.</p>
+                                <p><strong>Tech Used:</strong> Python, Django</p>
+                                <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-inner">
+                            <div class="project-front" style="background-image: url('images/event.jpg');"></div>
+                            <div class="project-back">
+                                <h3>Event Management System</h3>
+                                <p>A Django-powered event management system that enables users to create, manage, and book events seamlessly. Organizers can track registrations, send automated reminders, and handle ticketing, while attendees can browse events and receive updates.</p>
+                                <p><strong>Tech Used:</strong> Python, Django</p>
+                                <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-inner">
+                            <div class="project-front" style="background-image: url('images/library.jpg');"></div>
+                            <div class="project-back">
+                                <h3>Library Management System</h3>
+                                <p>A robust library management system built with Django to manage book records, user registrations, and borrowing/return processes. It includes book search, due date tracking, and fine calculations, ensuring an organized and efficient library operation.</p>
+                                <p><strong>Tech Used:</strong> Python, Django</p>
+                                <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="work-experience">
+            <h2>Work Experience</h2>
+            <section class="section">
+                <div class="timeline">
+                    <div class="job" data-job="1">
+                        <img src="images/company1-logo.png" alt="Company 1" class="company-logo">
+                        <h3>Software Engineer (2022 - Present)</h3>
+                        <div class="job-details">Developed web applications using Django and React, optimized performance, and led a team of developers.</div>
+                    </div>
+                    <div class="job" data-job="2">
+                        <img src="images/company2-logo.png" alt="Company 2" class="company-logo">
+                        <h3>Web Developer (2020 - 2022)</h3>
+                        <div class="job-details">Built responsive websites, improved UI/UX, and implemented API integrations.</div>
+                    </div>
+                    <div class="job" data-job="3">
+                        <img src="images/company3-logo.png" alt="Company 3" class="company-logo">
+                        <h3>Internship (2019 - 2020)</h3>
+                        <div class="job-details">Gained hands-on experience with front-end technologies and collaborated on real-world projects.</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section class="education">
+            <h2>Education & Certifications</h2>
+            <div class="education-box">
+                <h3>Bachelor of Computer Science</h3>
+                <p>XYZ University, 2021 - 2025</p>
+                <p>Specialized in Software Development and Web Technologies.</p>
+            </div>
+            <section class="section">
+                <div class="grid-container">
+                    <div class="certification-box">
+                        <img src="images/certificate.jpg" alt="Python Certification" class="icon">
+                        <h3>Certified Python Developer</h3>
+                    </div>
+                    <div class="certification-box">
+                        <img src="images/certificate.jpg" alt="Django Certification" class="icon">
+                        <h3>Django Web Development Certification</h3>
+                    </div>
+                    <div class="certification-box">
+                        <img src="images/certificate.jpg" alt="Full-Stack Certification" class="icon">
+                        <h3>Full-Stack Web Development</h3>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section class="contact">
+            <h2>Contact Me</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="input-container">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-container">
+                        <textarea id="message" rows="4" placeholder=" " required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="contact-button">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" title="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- LightBox CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <!-- Confetti CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
+
+    <!-- Logo Animation -->
+    <script>
+        gsap.from(".logo", {opacity: 0, y: 50, duration: 1.5, ease: "power3.out"});
+    </script>
+
+    <!-- Toggle b/w light and dark mode -->
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+            let button = document.querySelector(".toggle-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                button.textContent = "☀️";
+            } else {
+                button.textContent = "🌙";
+            }
+        }
+    </script>
+
+    <!-- External JS Scripts -->
+    <script src="js/hero.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/experience.js"></script>
+    <script src="js/certificate.js"></script>
+    <script src="js/contact.js"></script>
+    
+    <!-- Hello Wave Animation -->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+</body>
+</html>

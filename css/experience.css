@@ -1,0 +1,59 @@
+.work-experience {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.job {
+    position: relative;
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    margin: 20px 0;
+    width: 45%;
+    opacity: 0;
+}
+.job:nth-child(odd) {
+    left: -1%;
+}
+.job:nth-child(even) {
+    left: 51%;
+}
+.job h3 {
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.job h3:hover {
+    color: #ff6600;
+}
+.job-details {
+    display: none;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+.company-logo {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    /* background-color: #fff; */
+}
+.job:hover .company-logo {
+    transform: scale(1.1);
+}

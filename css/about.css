@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.about-section {
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    text-align: left;
+}
+.about-text {
+    flex: 1.2;
+    font-size: 1.2rem;
+    opacity: 0;
+}
+.highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.about-image {
+    position: relative;
+}
+.about-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out;
+}
+.about-image img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+.social-icons {
+    margin-top: 15px;
+}
+.social-icons a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+.social-icons a:hover {
+    color: #ff5500;
+}
