@@ -28,13 +28,7 @@ This is a **visually engaging, interactive, and professional** portfolio website
 │   ├── 📂 css      # Custom Stylesheets
 │   ├── 📂 js       # JavaScript Files
 │
-├── 📜 index.html   # Main Page with iframes for sections
-├── 📜 about.html   # About Me Section
-├── 📜 skills.html  # Technical & Soft Skills Section
-├── 📜 projects.html # Projects Showcase
-├── 📜 experience.html # Work Experience
-├── 📜 education.html # Education & Certifications
-├── 📜 contact.html # Contact Form
+├── 📜 index.html   # Main Page with all sections
 ├── 📜 README.md    # This file
 ```
 
