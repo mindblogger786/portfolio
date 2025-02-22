@@ -38,3 +38,10 @@
 .certification-box:hover .icon {
     transform: rotateY(360deg);
 }
+.certification-box h3 {
+    font-weight: 500;
+}
+.certification-box strong {
+    font-weight: 900;
+    color: var(--primary-color);
+}
